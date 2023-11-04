@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
@@ -25,7 +26,8 @@
             </div>
         </div>
         <div class="pronia">
-            <div>
+            <div class="phone">
+                <i class="fa-solid fa-phone"></i>
                 +00 123 456 789
             </div>
             <div>
@@ -33,41 +35,105 @@
             </div>
             <div>
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-user-group"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-basket-shopping"></i>
             </div>
         </div>
     </header>
-    <hr>
     <nav id="nav">
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Home</a></li>
-            <li><a href="">Home</a></li>
+            <li>
+                <a href="#">HOME</a>
+                <ul class="submenu">
+                    <li><a href="#">Home One</a></li>
+                    <li><a href="#">Home Two</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">SHOP</a>
+                    <ul class="shopNav">
+                        
+                        <li>
+                            <ul class="submenu">
+                                <h3>Shop Layout</h3>
+                                <li><a href="#">Blog List View</a></li>
+                                <li><a href="#">Blog Detail</a></li>
+                                <li><a href="#">Multi level dropdown</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="submenu">
+                                <h3>Product Style</h3>
+                                <li><a href="#">Blog List View</a></li>
+                                <li><a href="#">Blog Detail</a></li>
+                                <li><a href="#">Multi level dropdown</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="submenu">
+                                <h3>Product Related</h3>
+                                <li><a href="#">Blog List View</a></li>
+                                <li><a href="#">Blog Detail</a></li>
+                                <li><a href="#">Multi level dropdown</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                
+            </li>
+            <li class="blogNav">
+                <a href="#">BLOG</a>
+                <ul class="submenu">
+                    <li><a href="#">Blog List View</a></li>
+                    <li><a href="#">Blog Detail</a></li>
+                    <li>
+                        <a href="#">Multi level dropdown</a>
+                        <ul class="submenu multipleLevel">
+                            <li>
+                                <a href="#">Multi level dropdown</a>
+                                <ul class="submenu">
+                            <li><a href="#">Multi level dropdown</a></li>
+                        </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">ABOUT US</a></li>
+            <li>
+                <a href="#">PAGES</a>
+                <ul class="submenu">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Error 404</a></li>
+                </ul>
+            </li>
+            <li><a href="#">CONTACT US</a></li>
         </ul>
     </nav>
     <main>
         <section id="slider">
-            <button class="prevBtn">
-                <i class="fa-solid  fa-arrow-left-long"></i>
-            </button>
-            <div class="container">
+            <div class="button">
+                <button class="prevBtn">
+                    <i class="fa-solid  fa-arrow-left-long"></i>
+                </button>
+            </div>
+            <div class="container" data-aos="fade-up" data-aos-duration="1000" >
                 
                 <img  id='sliderImg' src="https://htmldemo.net/pronia/pronia/assets/images/slider/inner-img/1-1-524x617.png" alt="flower">
                
             </div>
-            <button class="nextBtn">
-                <i class="fa-solid fa-arrow-right-long"></i>
-            </button>
+            <div class="button">
+                <button class="nextBtn">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+            </div>
         </section>
     </main>
 <footer>
 
 </footer>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
 </html>

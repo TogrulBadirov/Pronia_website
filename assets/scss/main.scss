@@ -19,23 +19,141 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 10px;
+        padding: 20px;
         color: #525252;
+        .phone{
+            .fa-phone::before{
+                contain: '';
+                color: white;
+                padding: 10px;
+                background-color: #abd373;
+                border-radius: 5px;
+            }
+        }
     }
 }
 #nav{
     ul{
         display: flex;
         justify-content: center;
-        padding: 20px;
         gap: 10px;
         list-style: none;
-        a{
-            color: #4c4c4c;
-            text-decoration: none;
-            font-size: 18px;
+        border-top: 1px solid #dee2e6;
+        li{
+            
+            position: relative;
+            .submenu{
+                text-transform: uppercase;
+                transform: scaleY(0);
+                transform-origin: top left;
+                transition: 0.2s;
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                background-color: white;
+                width: fit-content;
+                white-space: nowrap;
+                z-index: 3;
+                padding: 20px;
+                li{
+                    a{
+                        transition: 0.4s;
+                    }
+                    a:hover{
+                        transform: translateX(10px);
+                    }
+                    a::after{
+                        content: '';
+                        width: 0px;
+                    }
+                    a:hover::after{
+                        width: 0px;
+                    }
+                    
+                }
+            }
+            .shopNav{
+                z-index: 3;
+                position: absolute;
+                top: 40px;
+                left: 0;
+                gap: 0;
+                visibility: hidden;
+                ul{
+                    background-color: white;
+                    
+                }
+                li{
+                    position: relative;
+                }
+                .submenu{
+                    position: relative;
+                    top: 0px;
+                    padding: 40px;
+                    a{
+                        padding: 0;
+                    }
+                    color: #383838;
+                    h3{
+                        font-weight: 500;
+                    }
+                }
+            }
             
         }
+        .blogNav{
+            li ul{
+                transform: scaleY(0) !important;
+                visibility: hidden !important;
+                position: absolute;
+                top: 0;
+                left: 205px;
+                background-color:  white;
+            }
+            li:hover .multipleLevel{
+                transform: scaleY(1) !important;
+                visibility: visible !important;
+             }
+             .multipleLevel{
+                li:hover ul{
+                    transform: scaleY(1) !important;
+                    visibility: visible !important;
+                 }
+             }
+        }
+        a{
+            display: block;
+            color: #4c4c4c;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 40px;
+            padding: 0 10px;
+            transition: 0.2s;
+        }
+        a::after{
+            content: '';
+            background-color: #abd373;
+            display: block;
+            width: 0;
+            height: 2px;
+            transition: 0.4s;
+            
+        }
+        li:hover > a{
+            color: #abd373;
+        }
+        li:hover ul{
+           transform: scaleY(1);
+           visibility: visible;
+        }
+        li:hover a::after{
+            content: '';
+            width: 100%;
+        }
+        
     }
 }
 #slider{
@@ -44,41 +162,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    overflow: hidden;
 img{
-    transition: 0.1s;
+    transition: 1s;
 }
-button{
+.button{
+    
+    margin: 12px;
+    button{
     background: white;
-    border: none;
     padding: 12px;
+    border: none;
     cursor: pointer;
-    transition: 0.3s;
-    position: relative;
+    transition: 50ms;
+    }
+    button:active{
+        scale: (0.9);
+    }
 }
 button:hover{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-    // .nextBtn{
-
-    // }
-
-    // .prevBtn{
-
-    // }
-}
-
-.animation{
-    animation-name: example;
-  animation-duration: 4s;
-}
-
-@keyframes example{
-    from{
-        background-color: red;
-    }
-    to{
-        background-color: black;
-    }
 }

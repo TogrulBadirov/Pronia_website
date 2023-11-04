@@ -11,19 +11,13 @@ const nextBtn = document.querySelector('.nextBtn')
 let ind = 0;
 
 
-
+AOS.init();
 
 body.addEventListener('mousemove',(event)=>{
-    let x = Math.floor(event.clientX/100);
-    let y =  Math.floor(event.clientY/100);
+    let x = Math.floor(event.clientX/100)*1.5;
+    let y =  Math.floor(event.clientY/100)*1.5;
     sliderImg.style.transform = `translate(${-x}px,${-y}px)`
 })
-
-
-
-
-
-
 
 prevBtn.addEventListener('click',()=>{
     ind++

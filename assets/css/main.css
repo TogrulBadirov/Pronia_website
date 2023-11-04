@@ -17,21 +17,127 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
   color: #525252;
+}
+#header .pronia .phone .fa-phone::before {
+  contain: "";
+  color: white;
+  padding: 10px;
+  background-color: #abd373;
+  border-radius: 5px;
 }
 
 #nav ul {
   display: flex;
   justify-content: center;
-  padding: 20px;
   gap: 10px;
   list-style: none;
+  border-top: 1px solid #dee2e6;
+}
+#nav ul li {
+  position: relative;
+}
+#nav ul li .submenu {
+  text-transform: uppercase;
+  transform: scaleY(0);
+  transform-origin: top left;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  z-index: 3;
+  padding: 20px;
+}
+#nav ul li .submenu li a {
+  transition: 0.4s;
+}
+#nav ul li .submenu li a:hover {
+  transform: translateX(10px);
+}
+#nav ul li .submenu li a::after {
+  content: "";
+  width: 0px;
+}
+#nav ul li .submenu li a:hover::after {
+  width: 0px;
+}
+#nav ul li .shopNav {
+  z-index: 3;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  gap: 0;
+  visibility: hidden;
+}
+#nav ul li .shopNav ul {
+  background-color: white;
+}
+#nav ul li .shopNav li {
+  position: relative;
+}
+#nav ul li .shopNav .submenu {
+  position: relative;
+  top: 0px;
+  padding: 40px;
+  color: #383838;
+}
+#nav ul li .shopNav .submenu a {
+  padding: 0;
+}
+#nav ul li .shopNav .submenu h3 {
+  font-weight: 500;
+}
+#nav ul .blogNav li ul {
+  transform: scaleY(0) !important;
+  visibility: hidden !important;
+  position: absolute;
+  top: 0;
+  left: 205px;
+  background-color: white;
+}
+#nav ul .blogNav li:hover .multipleLevel {
+  transform: scaleY(1) !important;
+  visibility: visible !important;
+}
+#nav ul .blogNav .multipleLevel li:hover ul {
+  transform: scaleY(1) !important;
+  visibility: visible !important;
 }
 #nav ul a {
+  display: block;
   color: #4c4c4c;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
+  line-height: 40px;
+  padding: 0 10px;
+  transition: 0.2s;
+}
+#nav ul a::after {
+  content: "";
+  background-color: #abd373;
+  display: block;
+  width: 0;
+  height: 2px;
+  transition: 0.4s;
+}
+#nav ul li:hover > a {
+  color: #abd373;
+}
+#nav ul li:hover ul {
+  transform: scaleY(1);
+  visibility: visible;
+}
+#nav ul li:hover a::after {
+  content: "";
+  width: 100%;
 }
 
 #slider {
@@ -40,32 +146,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 #slider img {
-  transition: 0.1s;
+  transition: 1s;
 }
-#slider button {
+#slider .button {
+  margin: 12px;
+}
+#slider .button button {
   background: white;
-  border: none;
   padding: 12px;
+  border: none;
   cursor: pointer;
-  transition: 0.3s;
-  position: relative;
+  transition: 50ms;
+}
+#slider .button button:active {
+  scale: 0.9;
 }
 #slider button:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.animation {
-  animation-name: example;
-  animation-duration: 4s;
-}
-
-@keyframes example {
-  from {
-    background-color: red;
-  }
-  to {
-    background-color: black;
-  }
 }/*# sourceMappingURL=main.css.map */
